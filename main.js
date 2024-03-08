@@ -5,3 +5,9 @@ onload = () => {
       clearTimeout(c);
     }, 1000);
   };
+
+  document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('playMusic').play();
+    document.removeEventListener('click', musicPlay);
+}
